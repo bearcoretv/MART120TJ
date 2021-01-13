@@ -1,0 +1,5 @@
+Teddy Jumpp
+MART120
+1/13/2021
+
+	As someone who had minimal (but still had some) experience with command prompts, learning how to use one and navigate files was really quite interesting. There are a lot of ways it's quite similar to the GUI that most people are familiar with. Folders/Directories exist as branches of other folders/directories and help with organization and hierarchy. I have to say, though, I've taken a liking to the CLI as it's easy to jump directly to where you need to be from where you are right now, as long as you know the absolute path to the directory. While I imagine this doesn't always save crazy amounts of time, it would probably be really impressive how much time it takes over a several hour/several day/several week project. I can't wait to be doing more with the CLI as I progress in the Unix Magic book!
