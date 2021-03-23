@@ -1,10 +1,20 @@
+// need to create variables that we can change in the draw
 var leyex = 200;
+var movementL = 1;
+var movementR = 1;
+var movementRY = 1;
+var reyex = 300;
+var moufy = 300;
+var reyey = 175;
+var titlesize = 32
+var subsize = 16
+var sizevar = 2
 
-var movement = 5;
 
 function setup()
 {
     createCanvas(500, 600);
+    moufspeed = Math.floor(Math.random() * 10);
 }
 
 function draw()
@@ -18,19 +28,39 @@ function draw()
     // nose
 
     fill(255, 255, 255);
-    circle(200, 175, 50);
+    // replace the numbers with variables created above
+    circle(leyex, 175, 50);
+    //circle(200, 175, 50);
+    // update the variables to make the circle move
     // l whites
+    if(leyex >= 225 || leyex <= 175)
+    {
+        movementL *= -1;
+    }
+    leyex += movementL;
 
     fill(255, 255, 255);
-    circle(300, 175, 50);
+    circle(reyex, reyey, 50);
     // r whites
+
+    if(reyex >= 325 || reyex <= 275)
+    {
+        movementR *= -1;
+    }
+    reyex += movementR;
+
+    if(reyey <= 150 || reyey >= 200)
+    {
+        movementRY *= -1;
+    }
+    reyey += movementRY;
 
     fill(61, 38, 4);
     circle(leyex, 175, 25);
     // l iris
 
     fill(61, 38, 4);
-    circle(300, 175, 25);
+    circle(reyex, reyey, 25);
     // r iris
 
     fill(0, 0, 0);
@@ -42,33 +72,44 @@ function draw()
     // r eyebrow
 
     fill(242, 145, 189);
-    rect(200, 300, 100, 50);
-    // hair
+    rect(200, moufy, 100, 50);
+    // mouth
+    if(moufy >= 325 || moufy <= 275)
+    {
+        moufspeed *= -1;
+    }
+    moufy += moufspeed;
 
     fill(0, 0, 0);
     rect(225, 70, 50, 60);
-    // mouth
+    // hair
 
-    point(200,175);
-    // r pupil
-
-    point(300,175);
+    point(leyex,175);
     // l pupil
 
-    textSize(32);
+    point(reyex,reyey);
+    // r pupil
+
+    textSize(titlesize);
     text('Simulacrum', 170, 420);
-    textSize(16);
+    textSize(subsize);
     text('By Teddy J.', 220, 440);
 
-    consolelog("isthisworking");
+    
+        titlesize += sizevar;
+        subsize += sizevar;
+    
+        if(titlesize >= 42)
+        {
+        sizevar *= -1
+        }
 
-    if(leyex >= 250 || x <= 150)
-    {
-        movement *= -1;
-    }
+        if(titlesize <= 30)
+        {
+        sizevar *= -1
+        }
+    //consolelog("isthisworking");
 
     
-
-    leyex += movement;
     
 }
